@@ -17,7 +17,7 @@ export default function Footer({ onNavigate }: FooterProps) {
           
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold text-white mb-4">LexiconDigital</h3>
+            <h3 className="text-xl font-bold text-white mb-4">InkbyteStudio</h3>
             <p className="text-sm max-w-xs">
               Professional Wikipedia pages built for you. Establishing
               credibility and global recognition.
@@ -51,7 +51,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             <h4 className="text-lg font-semibold text-white mb-4">Connect</h4>
             <div className="flex justify-center space-x-4 mb-4">
               <a
-                href="mailto:info@lexicondigital.com"
+                href="mailto:info@inkbytestudio.net"
                 className="p-2 bg-gray-800 rounded-full hover:bg-blue-500 transition-all duration-300 transform hover:scale-110"
               >
                 <Mail className="w-5 h-5" />
@@ -61,10 +61,10 @@ export default function Footer({ onNavigate }: FooterProps) {
             <p className="text-sm">
               <strong>Email:</strong>{' '}
               <a
-                href="mailto:info@lexicondigital.com"
+                href="mailto:info@inkbytestudio.net"
                 className="hover:text-blue-400 transition-colors"
               >
-                info@lexicondigital.com
+                info@inkbytestudio.net
               </a>
             </p>
 
@@ -77,7 +77,7 @@ export default function Footer({ onNavigate }: FooterProps) {
 
         <div className="border-t border-gray-800 mt-10 pt-6 text-center text-sm">
           <p>
-            &copy; {currentYear} LexiconDigital. All rights reserved.
+            &copy; {currentYear} InkbyteStudio. All rights reserved.
           </p>
         </div>
       </div>
