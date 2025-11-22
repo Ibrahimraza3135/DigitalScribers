@@ -66,7 +66,6 @@ export default function Services({ onNavigate }: ServicesProps) {
         'Ongoing protection for your Wikipedia presence. We monitor changes, address deletion risks, and keep your article current and compliant.',
       features: [
         'Monthly page monitoring',
-        'Deletion risk alerts',
         'Content update management',
         'Vandalism protection',
       ],
@@ -166,7 +165,7 @@ export default function Services({ onNavigate }: ServicesProps) {
             );
           })}
         </div>
-
+            {/* 
         <AnimatedSection>
           <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-lg max-w-4xl mx-auto">
             <p className="text-gray-700 text-center">
@@ -177,6 +176,7 @@ export default function Services({ onNavigate }: ServicesProps) {
             </p>
           </div>
         </AnimatedSection>
+        */}
 
         <AnimatedSection delay={200}>
           <div className="mt-20 text-center bg-white rounded-3xl p-12 shadow-xl">
