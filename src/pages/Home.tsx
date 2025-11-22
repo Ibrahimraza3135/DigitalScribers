@@ -110,8 +110,8 @@ export default function Home({ onNavigate }: HomeProps) {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 animate-fade-in">
-              Professional Wikipedia Pages,{' '}
-              <span className="text-blue-600">Built For Your Brand</span>
+              Professional Wikipedia Page Creation,{' '}
+              <span className="text-blue-600">Built For You</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
               Establish credibility and global recognition with a
@@ -119,13 +119,17 @@ export default function Home({ onNavigate }: HomeProps) {
               guidelines.
             </p>
 
+            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              {/* 
               <button
                 onClick={() => onNavigate('contact')}
                 className="px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold text-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Start Your Notability Assessment
               </button>
+              */}
               <button
                 onClick={() => onNavigate('contact')}
                 className="px-8 py-4 bg-white text-blue-600 border-2 border-blue-600 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
@@ -177,8 +181,7 @@ export default function Home({ onNavigate }: HomeProps) {
                 Why Choose LexiconDigital?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We combine expert knowledge of Wikipedia guidelines with
-                professional research and writing services.
+                We blend deep Wikipedia expertise with meticulous research and professional writing.
               </p>
             </div>
 
@@ -245,7 +248,7 @@ export default function Home({ onNavigate }: HomeProps) {
                     step: '5',
                     title: 'Monitoring',
                     description:
-                      'Ongoing updates and protection against deletion risks',
+                      'Ongoing updates and protection.',
                   },
                 ].map((item, index) => (
                   <AnimatedSection key={index} delay={index * 150}>
@@ -269,6 +272,8 @@ export default function Home({ onNavigate }: HomeProps) {
           </div>
         </section>
       </AnimatedSection>
+
+      {/* 
 
       <AnimatedSection>
         <section className="py-20 bg-gray-50">
@@ -325,26 +330,32 @@ export default function Home({ onNavigate }: HomeProps) {
         </section>
       </AnimatedSection>
 
-      <AnimatedSection>
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Get Published on Wikipedia?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Let's establish your credibility with a professionally crafted
-              Wikipedia presence.
-            </p>
-            <button
-              onClick={() => onNavigate('contact')}
-              className="px-12 py-5 bg-white text-blue-600 rounded-lg font-bold text-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl inline-flex items-center gap-2"
-            >
-              Start Now
-              <ArrowRight className="w-6 h-6" />
-            </button>
-          </div>
-        </section>
-      </AnimatedSection>
+      */}
+
+    <AnimatedSection>
+  <section className="py-20 bg-white">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        Ready to Get Published on Wikipedia?
+      </h2>
+      <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+        Let's establish your credibility with a professionally crafted
+        Wikipedia presence.
+      </p>
+      <button
+        onClick={() => onNavigate('contact')}
+        className="px-12 py-5 bg-blue-600 text-white rounded-lg font-bold text-xl hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl inline-flex items-center gap-2"
+      >
+        Start Now
+        <ArrowRight className="w-6 h-6" />
+      </button>
     </div>
+  </section>
+</AnimatedSection>
+
+
+    </div>
+
+    
   );
 }
