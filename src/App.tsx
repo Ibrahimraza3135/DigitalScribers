@@ -18,14 +18,14 @@ function App() {
 
   useEffect(() => {
     const titleMap: Record<string, string> = {
-      home: 'LexiconDigital - Professional Wikipedia Pages',
-      services: 'Our Services - LexiconDigital',
-      why: 'Why Hire Experts - LexiconDigital',
-      faq: 'FAQ - LexiconDigital',
-      about: 'About Us - LexiconDigital',
-      contact: 'Contact - LexiconDigital',
+      home: 'InkbyteStudio - Professional Wikipedia Pages',
+      services: 'Our Services - InkbyteStudio',
+      why: 'Why Hire Experts - InkbyteStudio',
+      faq: 'FAQ - InkbyteStudio',
+      about: 'About Us - InkbyteStudio',
+      contact: 'Contact - InkbyteStudio',
     };
-    document.title = titleMap[currentPage] || 'LexiconDigital';
+    document.title = titleMap[currentPage] || 'InkbyteStudio';
   }, [currentPage]);
 
   const renderPage = () => {
