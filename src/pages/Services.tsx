@@ -110,7 +110,7 @@ export default function Services({ onNavigate }: ServicesProps) {
               What We Do For You
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              LexiconDigital is a full-service Wikipedia content agency. We
+              InkbyteStudio is a full-service Wikipedia content agency. We
               handle every aspect of creating and maintaining your Wikipedia
               presence with professional expertise.
             </p>
