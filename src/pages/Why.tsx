@@ -63,8 +63,7 @@ export default function Why({ onNavigate }: WhyProps) {
               <span className="text-blue-600">Wikipedia Expert</span>?
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Because Wikipedia isn't just writing — it's rules, citations &
-              reputation.
+              Because Wikipedia Is More Than Just Writing. It’s Rules, Citations & Reputation.
             </p>
           </div>
         </AnimatedSection>
@@ -78,7 +77,7 @@ export default function Why({ onNavigate }: WhyProps) {
               <p className="text-lg md:text-xl leading-relaxed mb-6">
                 Creating a Wikipedia page requires deep knowledge of complex
                 policies, citation standards, and editorial guidelines. A single
-                mistake can result in immediate deletion or permanent rejection.
+                mistake can result in  rejection.
               </p>
               <p className="text-lg md:text-xl leading-relaxed">
                 Our team has years of experience navigating these challenges,
@@ -117,7 +116,7 @@ export default function Why({ onNavigate }: WhyProps) {
             ))}
           </div>
         </div>
-
+            {/* 
         <AnimatedSection>
           <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-8 md:p-12 text-white shadow-2xl mb-20">
             <div className="max-w-4xl mx-auto text-center">
@@ -138,6 +137,8 @@ export default function Why({ onNavigate }: WhyProps) {
             </div>
           </div>
         </AnimatedSection>
+
+        */}
 
         <AnimatedSection>
           <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl text-center">
