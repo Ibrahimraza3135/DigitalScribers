@@ -13,33 +13,21 @@ export default function FAQ({ onNavigate }: FAQProps) {
     {
       question: 'Can anyone have a Wikipedia page?',
       answer:
-        'No. Only subjects with significant independent media coverage from reliable sources can be approved. Wikipedia has strict notability guidelines that require substantial third-party coverage in reputable publications. Our notability assessment service can determine if you qualify.',
+        'No. Only subjects with significant  coverage from reliable sources can be approved. Wikipedia has strict notability guidelines that require substantial third-party coverage in reputable publications. Our notability assessment service can determine if you qualify.',
     },
-    {
-      question: 'Is this service legal and approved by Wikipedia?',
-      answer:
-        'Yes, our service is legal. We follow all Wikipedia rules and guidelines. However, it\'s important to note that Wikipedia does not officially endorse paid page creation services. We operate with full transparency and disclosure, ensuring all content meets Wikipedia\'s standards for neutrality and verifiability.',
-    },
+
     {
       question: 'How long does it take to create a Wikipedia page?',
       answer:
         'Typically 2–6 weeks depending on research availability and review times. The timeline includes comprehensive research (1-2 weeks), professional writing and citation (1-2 weeks), and submission/review process (1-2 weeks). Complex subjects with extensive coverage may take longer to ensure thoroughness.',
     },
-    {
-      question: 'What if my page gets rejected or deleted?',
-      answer:
-        'We provide revision support and strategies to improve your notability. If a page is rejected, we analyze the feedback, identify issues, and work on improvements. Our monitoring service also alerts you to deletion risks, allowing us to take preventive action. While we can\'t guarantee approval, we maximize your chances through expert preparation.',
-    },
+   
     {
       question: 'Can you update an existing Wikipedia page?',
       answer:
-        'Yes — we offer rewrite and maintenance plans for existing Wikipedia pages. Whether your page needs better citations, content updates, neutrality improvements, or structure optimization, our team can enhance it to meet current Wikipedia standards. We also offer ongoing monitoring to keep your page current.',
+        'Yes,  we offer rewrite and maintenance plans for existing Wikipedia pages. Whether your page needs better citations, content updates, neutrality improvements, or structure optimization, our team can enhance it to meet current Wikipedia standards. We also offer ongoing monitoring to keep your page current.',
     },
-    {
-      question: 'Do you guarantee a published page?',
-      answer:
-        'The final decision is made by Wikipedia\'s volunteer editors, so we cannot guarantee publication. What we do guarantee is a professionally researched, expertly written, and fully compliant article that maximizes approval chances. We only accept clients who meet notability criteria and provide honest assessments.',
-    },
+    
     {
       question: 'How much does it cost to create a Wikipedia page?',
       answer:
@@ -55,11 +43,7 @@ export default function FAQ({ onNavigate }: FAQProps) {
       answer:
         'Wikipedia strongly discourages subjects from writing their own pages due to conflict of interest. Articles written by subjects often contain promotional language, lack neutrality, and violate guidelines. Even if technically allowed, self-written pages face much higher scrutiny and deletion rates. Professional editing ensures compliance and objectivity.',
     },
-    {
-      question: 'What happens after my page is published?',
-      answer:
-        'After publication, your page becomes part of Wikipedia and can be edited by anyone. We offer monitoring services to watch for vandalism, deletion proposals, or problematic edits. Our team can respond to issues, make necessary updates, and ensure your page remains accurate and compliant with evolving Wikipedia standards.',
-    },
+   
   ];
 
   const toggleAccordion = (index: number) => {
@@ -134,7 +118,7 @@ export default function FAQ({ onNavigate }: FAQProps) {
             </button>
           </div>
         </AnimatedSection>
-
+          {/* 
         <AnimatedSection delay={400}>
           <div className="mt-12 bg-yellow-50 border-l-4 border-yellow-400 rounded-lg p-6 max-w-4xl mx-auto">
             <h3 className="font-bold text-lg text-gray-900 mb-2">
@@ -149,6 +133,7 @@ export default function FAQ({ onNavigate }: FAQProps) {
             </p>
           </div>
         </AnimatedSection>
+        */}
       </div>
     </div>
   );
