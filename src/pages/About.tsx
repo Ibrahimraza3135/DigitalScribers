@@ -52,7 +52,7 @@ export default function About({ onNavigate }: AboutProps) {
         <AnimatedSection>
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              We Build Your Reputation —{' '}
+              We Build Your Reputation {' '}
               <span className="text-blue-600">The Right Way</span>
             </h1>
           </div>
@@ -192,6 +192,7 @@ export default function About({ onNavigate }: AboutProps) {
           </div>
         </AnimatedSection>
 
+              {/* 
         <AnimatedSection delay={500}>
           <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-6 max-w-4xl mx-auto mb-12">
             <p className="text-gray-700 text-center text-lg">
@@ -202,6 +203,7 @@ export default function About({ onNavigate }: AboutProps) {
             </p>
           </div>
         </AnimatedSection>
+        */}
 
         <AnimatedSection delay={600}>
           <div className="text-center bg-gradient-to-r from-blue-600 to-blue-800 rounded-3xl p-12 text-white shadow-2xl">
