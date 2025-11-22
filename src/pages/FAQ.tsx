@@ -138,3 +138,4 @@ export default function FAQ({ onNavigate }: FAQProps) {
     </div>
   );
 }
+
