@@ -63,7 +63,7 @@ export default function About({ onNavigate }: AboutProps) {
             <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl">
               <div className="space-y-6 text-lg md:text-xl text-gray-700 leading-relaxed">
                 <p className="animate-slide-in-1">
-                  <strong className="text-gray-900">InkbyteStudio</strong> is a
+                  <strong className="text-gray-900">WordcraftDigital</strong> is a
                   dedicated team of professional writers, editors, and research
                   analysts specializing in Wikipedia compliance.
                 </p>
