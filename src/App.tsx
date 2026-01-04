@@ -19,13 +19,13 @@ function App() {
   useEffect(() => {
     const titleMap: Record<string, string> = {
       home: 'WordcraftDigital - Professional Wikipedia Pages',
-      services: 'Our Services - InkbyteStudio',
-      why: 'Why Hire Experts - InkbyteStudio',
-      faq: 'FAQ - InkbyteStudio',
-      about: 'About Us - InkbyteStudio',
-      contact: 'Contact - InkbyteStudio',
+      services: 'Our Services - WordcraftDigital',
+      why: 'Why Hire Experts - WordcraftDigital',
+      faq: 'FAQ - WordcraftDigital',
+      about: 'About Us - WordcraftDigital',
+      contact: 'Contact - WordcraftDigital',
     };
-    document.title = titleMap[currentPage] || 'InkbyteStudio';
+    document.title = titleMap[currentPage] || 'WordcraftDigital';
   }, [currentPage]);
 
   const renderPage = () => {
