@@ -17,7 +17,7 @@ export default function Footer({ onNavigate }: FooterProps) {
           
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold text-white mb-4">InkbyteStudio</h3>
+            <h3 className="text-xl font-bold text-white mb-4">WordcraftDigital</h3>
             <p className="text-sm max-w-xs">
               Professional Wikipedia pages built for you. Establishing
               credibility and global recognition.
@@ -77,7 +77,7 @@ export default function Footer({ onNavigate }: FooterProps) {
 
         <div className="border-t border-gray-800 mt-10 pt-6 text-center text-sm">
           <p>
-            &copy; {currentYear} InkbyteStudio. All rights reserved.
+            &copy; {currentYear} WordcraftDigital. All rights reserved.
           </p>
         </div>
       </div>
