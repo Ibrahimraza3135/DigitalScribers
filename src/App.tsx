@@ -18,7 +18,7 @@ function App() {
 
   useEffect(() => {
     const titleMap: Record<string, string> = {
-      home: 'InkbyteStudio - Professional Wikipedia Pages',
+      home: 'WordcraftDigital - Professional Wikipedia Pages',
       services: 'Our Services - InkbyteStudio',
       why: 'Why Hire Experts - InkbyteStudio',
       faq: 'FAQ - InkbyteStudio',
