@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, MapPin, Clock } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import AnimatedSection from '../components/AnimatedSection';
 
 export default function Contact() {
@@ -62,45 +62,23 @@ export default function Contact() {
           </div>
         </AnimatedSection>
 
-        {/* Info Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+        {/* Centered Email Card */}
+        <div className="flex justify-center">
           <AnimatedSection delay={100}>
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-              <Mail className="w-12 h-12 text-blue-600 mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 max-w-md w-full text-center">
+              <Mail className="w-12 h-12 text-blue-600 mb-4 mx-auto" />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Email Us
+              </h3>
               <a
-                href="mailto:steve@wordcraft-digital.com"
+                href="mailto:info@wordcraft-digital.com"
                 className="text-blue-600 font-medium hover:underline"
               >
                 info@wordcraft-digital.com
               </a>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-500 mt-2">
                 We typically respond within 24 hours
               </p>
-            </div>
-          </AnimatedSection>
-          {/*
-          <AnimatedSection delay={200}>
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-              <MapPin className="w-12 h-12 text-blue-600 mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Our Office</h3>
-              <p className="text-gray-600 mb-2">Manchester, United Kingdom</p>
-              <p className="text-sm text-gray-500">
-                Serving clients worldwide remotely
-              </p>
-            </div>
-          </AnimatedSection>
-
-          */}
-
-          <AnimatedSection delay={300}>
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-              <Clock className="w-12 h-12 text-blue-600 mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
-                Business Hours
-              </h3>
-              <p className="text-gray-600 mb-2">Monday – Friday</p>
-              <p className="text-sm text-gray-500">10:00 AM – 6:00 PM GMT</p>
             </div>
           </AnimatedSection>
         </div>
