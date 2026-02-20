@@ -67,11 +67,13 @@ export default function Footer({ onNavigate }: FooterProps) {
                 info@wordcraft-digital.com
               </a>
             </p>
-
+            {/*
             <p className="text-sm mt-2">
               <strong>Office:</strong> Manchester, United Kingdom
             </p>
             <p className="text-sm">Mon – Fri: 10 AM – 6 PM</p>
+
+            */}
           </div>
         </div>
 
