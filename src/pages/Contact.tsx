@@ -79,7 +79,7 @@ export default function Contact() {
               </p>
             </div>
           </AnimatedSection>
-          {*/
+          {/*
           <AnimatedSection delay={200}>
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <MapPin className="w-12 h-12 text-blue-600 mb-4" />
