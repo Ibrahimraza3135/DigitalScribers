@@ -18,14 +18,14 @@ function App() {
 
   useEffect(() => {
     const titleMap: Record<string, string> = {
-      home: 'WordcraftDigital - Professional Wikipedia Pages',
-      services: 'Our Services - WordcraftDigital',
-      why: 'Why Hire Experts - WordcraftDigital',
-      faq: 'FAQ - WordcraftDigital',
-      about: 'About Us - WordcraftDigital',
-      contact: 'Contact - WordcraftDigital',
+      home: 'DigitalScribers - Professional Wikipedia Pages',
+      services: 'Our Services - DigitalScribers',
+      why: 'Why Hire Experts - DigitalScribers',
+      faq: 'FAQ - DigitalScribers',
+      about: 'About Us - DigitalScribers',
+      contact: 'Contact - DigitalScribers',
     };
-    document.title = titleMap[currentPage] || 'WordcraftDigital';
+    document.title = titleMap[currentPage] || 'DigitalScribers';
   }, [currentPage]);
 
   const renderPage = () => {
