@@ -71,10 +71,10 @@ export default function Contact() {
                 Email Us
               </h3>
               <a
-                href="mailto:info@wordcraft-digital.com"
+                href="mailto:info@digitalscribers.com"
                 className="text-blue-600 font-medium hover:underline"
               >
-                info@wordcraft-digital.com
+                james@digitalscribers.com
               </a>
               <p className="text-sm text-gray-500 mt-2">
                 We typically respond within 24 hours
