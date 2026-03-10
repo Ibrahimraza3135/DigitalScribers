@@ -51,7 +51,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             <h4 className="text-lg font-semibold text-white mb-4">Connect</h4>
             <div className="flex justify-center space-x-4 mb-4">
               <a
-                href="mailto:steve@wordcraft-digital.com"
+                href="mailto:james@digitalscribers.com"
                 className="p-2 bg-gray-800 rounded-full hover:bg-blue-500 transition-all duration-300 transform hover:scale-110"
               >
                 <Mail className="w-5 h-5" />
