@@ -61,10 +61,10 @@ export default function Footer({ onNavigate }: FooterProps) {
             <p className="text-sm">
               <strong>Email:</strong>{' '}
               <a
-                href="mailto:steve@wordcraft-digital.com"
+                href="mailto:james@digitalscribers.com"
                 className="hover:text-blue-400 transition-colors"
               >
-                info@wordcraft-digital.com
+                info@digitalscribers.com
               </a>
             </p>
             {/*
