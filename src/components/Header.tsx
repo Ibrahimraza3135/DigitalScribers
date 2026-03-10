@@ -39,7 +39,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
             onClick={() => onNavigate('home')}
             className="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors"
           >
-            WordcraftDigital
+            DigitalScribers
           </button>
 
           <nav className="hidden md:flex space-x-8">
