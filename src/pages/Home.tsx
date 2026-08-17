@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import {
   CheckCircle,
   Users,
@@ -7,9 +8,11 @@ import {
   TrendingUp,
   Clock,
   ArrowRight,
+  ArrowDown,
   Star,
 } from 'lucide-react';
 import AnimatedSection from '../components/AnimatedSection';
+import WikipediaGlobe from '../components/WikipediaGlobe';
 
 interface HomeProps {
   onNavigate: (page: string) => void;
@@ -71,7 +74,7 @@ export default function Home({ onNavigate }: HomeProps) {
       name: 'Sarah Mitchell',
       role: 'CEO, TechVentures Inc.',
       content:
-        'LexiconDigital helped us establish credibility in our industry. Their expertise with Wikipedia guidelines was invaluable.',
+        'DigitalScribers helped us establish credibility in our industry. Their expertise with Wikipedia guidelines was invaluable.',
       rating: 5,
     },
     {
@@ -105,91 +108,141 @@ export default function Home({ onNavigate }: HomeProps) {
   }, []);
 
   return (
-    <div className="min-h-screen">
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-blue-50 pt-24 pb-12">
+    <div className="min-h-screen bg-ash-white">
+      {/* ================= SEO ================= */}
+      <Helmet>
+        <title>Professional Wikipedia Page Creation Services | Digital Scribers</title>
+        <meta
+          name="description"
+          content="Digital Scribers offers professional Wikipedia page creation, editing, and notability assessment services that fully comply with Wikipedia guidelines."
+        />
+        <link rel="canonical" href="https://digitalscribers.com/" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Professional Wikipedia Page Creation Services" />
+        <meta
+          property="og:description"
+          content="Get professionally written, Wikipedia-compliant articles created by expert editors."
+        />
+        <meta property="og:url" content="https://digitalscribers.com/" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+
+        {/* Schema.org */}
+        <script type="application/ld+json">
+          {`
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Digital Scribers",
+            "url": "https://digitalscribers.com",
+            "description": "Professional Wikipedia page creation and consulting services.",
+            "serviceType": "Wikipedia Page Creation"
+          }
+        `}
+        </script>
+      </Helmet>
+
+      {/* ================= HERO ================= */}
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#FAF9F6] to-amber-50/30 pt-28 pb-12 overflow-hidden border-b border-gray-100">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 animate-fade-in">
-              Professional Wikipedia Page Creation,{' '}
-              <span className="text-blue-600">Built For You</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
-              Establish credibility and global recognition with a
-              professionally-crafted Wikipedia article that meets official
-              guidelines.
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left Column: Call to Action & Copy */}
+            <div className="lg:col-span-7 text-left">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 mb-6 tracking-tight leading-none animate-fade-in">
+                Professional Wikipedia Page Creation,{' '}
+                <span className="text-gold-gradient drop-shadow-sm font-extrabold block lg:inline">Built For You</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+                Establish credibility and global recognition with a
+                professionally-crafted Wikipedia article that meets official
+                guidelines.
+              </p>
 
-            
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              {/* 
-              <button
-                onClick={() => onNavigate('contact')}
-                className="px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold text-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-              >
-                Start Your Notability Assessment
-              </button>
-              */}
-              <button
-                onClick={() => onNavigate('contact')}
-                className="px-8 py-4 bg-white text-blue-600 border-2 border-blue-600 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-              >
-                Book a Free Consultation
-              </button>
+              <div className="flex flex-col sm:flex-row gap-4 mb-4">
+                <button
+                  onClick={() => onNavigate('contact')}
+                  className="px-8 py-4 bg-black text-amber-400 hover:text-amber-300 border border-amber-500/30 rounded-lg font-semibold text-lg hover:bg-zinc-900 transition-all duration-300 transform hover:scale-105 shadow-xl"
+                >
+                  Start Your Notability Assessment
+                </button>
+                <button
+                  onClick={() => onNavigate('contact')}
+                  className="px-8 py-4 bg-white text-black border-2 border-black rounded-lg font-semibold text-lg hover:bg-black hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg"
+                >
+                  Book a Free Consultation
+                </button>
+              </div>
             </div>
 
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl">
-              <h3 className="text-lg font-semibold text-gray-700 mb-6">
-                Our Process
-              </h3>
-              <div className="flex flex-wrap justify-center items-center gap-4">
-                {steps.map((step, index) => (
-                  <div key={index} className="flex items-center">
-                    <div
-                      className={`px-6 py-3 rounded-full font-semibold transition-all duration-500 ${
-                        index === currentStep
-                          ? 'bg-blue-600 text-white scale-110 shadow-lg'
-                          : index < currentStep
-                          ? 'bg-blue-100 text-blue-600'
-                          : 'bg-gray-100 text-gray-400'
-                      }`}
-                    >
-                      {step}
-                    </div>
-                    {index < steps.length - 1 && (
+            {/* Right Column: 3D Rotating Wikipedia Globe */}
+            <div className="lg:col-span-5 flex justify-center items-center relative">
+              <div className="absolute w-72 h-72 bg-amber-500/5 rounded-full filter blur-3xl -z-10 animate-pulse"></div>
+              <WikipediaGlobe />
+            </div>
+          </div>
+
+          {/* Interactive process section */}
+          <div className="bg-white/80 border border-amber-500/10 backdrop-blur-sm rounded-2xl p-8 gold-shadow max-w-5xl mx-auto mt-16">
+            <h3 className="text-sm font-semibold tracking-wider text-amber-800 uppercase mb-6 text-center">
+              Our Interactive Process
+            </h3>
+            <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 w-full">
+              {steps.map((step, index) => (
+                <div key={index} className="flex flex-col md:flex-row items-center w-full md:w-auto">
+                  <div
+                    className={`px-6 py-3 rounded-full font-semibold transition-all duration-500 text-center w-full md:w-auto ${
+                      index === currentStep
+                        ? 'bg-black text-amber-400 border border-amber-500/50 scale-105 md:scale-110 shadow-lg'
+                        : index < currentStep
+                        ? 'bg-amber-500/10 text-amber-700 border border-amber-500/10'
+                        : 'bg-gray-100 text-gray-400'
+                    }`}
+                  >
+                    {step}
+                  </div>
+                  {index < steps.length - 1 && (
+                    <>
                       <ArrowRight
-                        className={`w-6 h-6 mx-2 transition-colors duration-500 ${
-                          index < currentStep
-                            ? 'text-blue-600'
-                            : 'text-gray-300'
+                        className={`hidden md:block w-6 h-6 mx-2 transition-colors duration-500 ${
+                          index < currentStep ? 'text-amber-500' : 'text-gray-300'
                         }`}
                       />
-                    )}
-                  </div>
-                ))}
-              </div>
+                      <ArrowDown
+                        className={`block md:hidden w-6 h-6 my-2 transition-colors duration-500 ${
+                          index < currentStep ? 'text-amber-500' : 'text-gray-300'
+                        }`}
+                      />
+                    </>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
+      {/* ================= WHY CHOOSE US ================= */}
       <AnimatedSection>
-        <section className="py-20 bg-white">
+        <section className="py-24 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Why Choose WordcraftDigital ?
+              <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">
+                Why Choose DigitalScribers?
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We blend deep Wikipedia expertise with meticulous research and professional writing.
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                We combine expert knowledge of Wikipedia guidelines with
+                professional research and writing services.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <AnimatedSection key={index} delay={index * 100}>
-                  <div className="group p-8 bg-gray-50 rounded-2xl hover:bg-blue-50 transition-all duration-300 hover:shadow-xl cursor-pointer transform hover:-translate-y-2">
-                    <benefit.icon className="w-12 h-12 text-blue-600 mb-4 group-hover:scale-110 transition-transform duration-300" />
+                  <div className="group p-8 bg-[#FAF9F6] border border-transparent rounded-2xl hover:bg-white transition-all duration-300 cursor-pointer gold-shadow-hover">
+                    <benefit.icon className="w-12 h-12 text-amber-600 mb-4 group-hover:scale-110 transition-transform duration-300" />
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
                       {benefit.title}
                     </h3>
@@ -204,14 +257,15 @@ export default function Home({ onNavigate }: HomeProps) {
         </section>
       </AnimatedSection>
 
+      {/* ================= STEP-BY-STEP PROCESS ================= */}
       <AnimatedSection>
-        <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-800">
+        <section className="py-24 bg-gradient-to-br from-zinc-950 to-black text-white border-t border-b border-amber-500/20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
                 Our Step-by-Step Process
               </h2>
-              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 From initial assessment to ongoing monitoring, we handle
                 everything.
               </p>
@@ -248,19 +302,19 @@ export default function Home({ onNavigate }: HomeProps) {
                     step: '5',
                     title: 'Monitoring',
                     description:
-                      'Ongoing updates and protection.',
+                      'Ongoing updates and protection against deletion risks',
                   },
                 ].map((item, index) => (
                   <AnimatedSection key={index} delay={index * 150}>
-                    <div className="flex items-start gap-6 bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300">
-                      <div className="flex-shrink-0 w-12 h-12 bg-white text-blue-600 rounded-full flex items-center justify-center text-xl font-bold">
+                    <div className="flex items-start gap-6 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-amber-500/20 rounded-2xl p-6 transition-all duration-300">
+                      <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-amber-400 to-yellow-600 text-black rounded-full flex items-center justify-center text-xl font-bold">
                         {item.step}
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-white mb-2">
                           {item.title}
                         </h3>
-                        <p className="text-blue-100 text-lg">
+                        <p className="text-gray-300 text-lg">
                           {item.description}
                         </p>
                       </div>
@@ -273,89 +327,29 @@ export default function Home({ onNavigate }: HomeProps) {
         </section>
       </AnimatedSection>
 
-      {/* 
 
+
+      {/* ================= CTA ================= */}
       <AnimatedSection>
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                What Our Clients Say
-              </h2>
-              <p className="text-xl text-gray-600">
-                Trusted by professionals and brands worldwide
-              </p>
-            </div>
-
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl">
-                <div className="flex justify-center mb-6">
-                  {[...Array(testimonials[currentTestimonial].rating)].map(
-                    (_, i) => (
-                      <Star
-                        key={i}
-                        className="w-6 h-6 text-yellow-400 fill-current"
-                      />
-                    )
-                  )}
-                </div>
-                <p className="text-2xl text-gray-700 text-center mb-8 leading-relaxed italic">
-                  "{testimonials[currentTestimonial].content}"
-                </p>
-                <div className="text-center">
-                  <p className="font-bold text-lg text-gray-900">
-                    {testimonials[currentTestimonial].name}
-                  </p>
-                  <p className="text-gray-600">
-                    {testimonials[currentTestimonial].role}
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex justify-center gap-2 mt-8">
-                {testimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentTestimonial(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      index === currentTestimonial
-                        ? 'bg-blue-600 w-8'
-                        : 'bg-gray-300 hover:bg-gray-400'
-                    }`}
-                  />
-                ))}
-              </div>
-            </div>
+        <section className="py-24 bg-gradient-to-br from-zinc-950 to-black text-white text-center border-t border-amber-500/20">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">
+              Ready to Get Published on Wikipedia?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+              Let's establish your credibility with a professionally crafted
+              Wikipedia presence.
+            </p>
+            <button
+              onClick={() => onNavigate('contact')}
+              className="px-12 py-5 bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 text-black rounded-lg font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl inline-flex items-center gap-2"
+            >
+              Start Now
+              <ArrowRight className="w-6 h-6" />
+            </button>
           </div>
         </section>
       </AnimatedSection>
-
-      */}
-
-    <AnimatedSection>
-  <section className="py-20 bg-white">
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-        Ready to Get Published on Wikipedia?
-      </h2>
-      <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-        Let's establish your credibility with a professionally crafted
-        Wikipedia presence.
-      </p>
-      <button
-        onClick={() => onNavigate('contact')}
-        className="px-12 py-5 bg-blue-600 text-white rounded-lg font-bold text-xl hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl inline-flex items-center gap-2"
-      >
-        Start Now
-        <ArrowRight className="w-6 h-6" />
-      </button>
     </div>
-  </section>
-</AnimatedSection>
-
-
-    </div>
-
-    
   );
 }
